@@ -19,7 +19,7 @@ while (<>) {
 }
 
 # Output hash in a descending numeric sort of its values
-#foreach my $word ( sort { $WORDS{$b} <=> $WORDS{$a} } keys %WORDS ) { # slower than below...
+#foreach my $word ( sort { $WORDS{$b} <=> $WORDS{$a} } keys %WORDS ) {
 foreach my $word ( reverse sort { $WORDS{$a} <=> $WORDS{$b} } keys %WORDS ) {
 
     print "$word\:$WORDS{$word}\n";
