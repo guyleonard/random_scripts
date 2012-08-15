@@ -6,6 +6,7 @@ use DBD::mysql;
 use Bio::Taxon;
 use Bio::Tree::Tree;
 use Bio::DB::GenBank;
+use DateTime;
 
 # NEW TABLE SCHEMA
 # mysql> CREATE TABLE new_proteins.orchard( protein_ID VARCHAR(20), PRIMARY KEY(protein_ID), accession VARCHAR(20), species VARCHAR(200), sequence TEXT, gr_superkingdom VARCHAR(50), gr_kingdom VARCHAR(50), gr_phylum VARCHAR(50), gr_class VARCHAR(50), gr_order VARCHAR(50), gr_family VARCHAR(50), gr_special1 VARCHAR(50), gr_special2 VARCHAR(50), gr_redundant VARCHAR(50), date_added DATETIME, source TEXT, source_ID VARCHAR(20));
@@ -26,11 +27,11 @@ our $EMPTY = q{};
 
 #####
 # USER VARIBALES
-our $SEED         = "$WD\/sequence.fasta";
-our $SPECIES_NAME = $EMPTY;                                                      # set to EMPTY for NCBI
-our $SOURCE       = "NCBI nr FASTA ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA";
-our $SOURCE_ID    = "NCBI";
-
+our $SEED             = "$WD\/sequence.fasta";
+our $SPECIES_NAME     = $EMPTY;                                                      # set to EMPTY for NCBI
+our $SOURCE           = "NCBI nr FASTA ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA";
+our $SOURCE_ID        = "NCBI";
+our $OLD_SPECIES_LIST = "$WD\/old_species_list_info.txt";
 #####
 
 # MYSQL CONFIG VARIABLES
@@ -53,8 +54,14 @@ sub get_genome {
 
 sub plant_seed {
 
-    #$count = 0;
+    # I only need to open the old file once, before I do anything else...
+    my %old_list     = get_old_taxonomy();
+
     foreach $defline (@deflineArray) {
+
+        # DATETIME values in 'YYYY-MM-DD HH:MM:SS'
+        my $DATETIME = DateTime->now( time_zone => "local" )->datetime();
+        $DATETIME =~ s/T/ /igs;
 
         if ( $SOURCE_ID eq "NCBI" ) {
             ## NCBI
@@ -83,8 +90,10 @@ sub plant_seed {
                 my $gr_family       = $group_divisions{'family'};
                 my $gr_special1     = $group_divisions{'no rank'};
 
+                my $gr_redundant = $old_list{$SPECIES_NAME};
+
                 print
-"&mysql($defline_values[1], $defline_values[3], $SPECIES_NAME, $sequenceArray[$count], $gr_superkingdom, $gr_kingdom, $gr_phylum, $gr_subphylum, $gr_class, $gr_order, $gr_family, $gr_special1, $gr_redundant, $date_added, $SOURCE, $SOURCE_ID, $gr_subkingdom, $gr_subphylum );\n";
+"&mysql($defline_values[1], $defline_values[3], $SPECIES_NAME, $sequenceArray[$count], $gr_superkingdom, $gr_kingdom, $gr_phylum, $gr_subphylum, $gr_class, $gr_order, $gr_family, $gr_special1, $gr_redundant, $DATETIME, $SOURCE, $SOURCE_ID, $gr_subkingdom, $gr_subphylum );\n";
 
                 #&mysql( $defline_values[1], $defline_values[3], $SPECIES_NAME, $sequenceArray[$count], $gr );
                 #$count++;
@@ -114,8 +123,10 @@ sub plant_seed {
                 my $gr_family       = $group_divisions{'family'};
                 my $gr_special1     = $group_divisions{'no rank'};
 
+                my $gr_redundant = $old_list{$SPECIES_NAME};
+
                 print
-"&mysql($defline_values[1], $defline_values[3], $SPECIES_NAME, $sequenceArray[$count], $gr_superkingdom, $gr_kingdom, $gr_phylum, $gr_subphylum, $gr_class, $gr_order, $gr_family, $gr_special1, $gr_redundant, $date_added, $SOURCE, $SOURCE_ID, $gr_subkingdom, $gr_subphylum );\n";
+"&mysql($defline_values[1], $defline_values[3], $SPECIES_NAME, $sequenceArray[$count], $gr_superkingdom, $gr_kingdom, $gr_phylum, $gr_subphylum, $gr_class, $gr_order, $gr_family, $gr_special1, $gr_redundant, $DATETIME, $SOURCE, $SOURCE_ID, $gr_subkingdom, $gr_subphylum );\n";
 
                 #&mysql( $defline_values[1], $defline_values[3], $SPECIES_NAME, $sequenceArray[$count], $gr );
                 #$count++;
@@ -137,6 +148,16 @@ sub plant_seed {
 
 sub get_old_taxonomy {
 
+    open my $in_old, '<', "$OLD_SPECIES_LIST";
+    my %old_list = $EMPTY;
+    # Read in the sequence identifiers
+    while ( my $line = <$in_old> ) {
+        chomp($line);
+        my ( $taxa, $group ) = split( /\t/, $line );
+        #print "T = $taxa\t G = $group\n";
+        $old_list{$taxa} = $group;
+    }
+    return %old_list;
 }
 
 sub get_taxonomy {
