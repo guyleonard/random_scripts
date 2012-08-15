@@ -6,16 +6,26 @@ use DBD::mysql;
 #NEW TABLE SCHEMA
 #mysql> CREATE TABLE new_proteins.orchard( protein_ID VARCHAR(20), PRIMARY KEY(protein_ID), accession VARCHAR(20), species VARCHAR(200), sequence TEXT, gr_superkingdom VARCHAR(50), gr_kingdom VARCHAR(50), gr_phylum VARCHAR(50), gr_class VARCHAR(50), gr_order VARCHAR(50), gr_family VARCHAR(50), gr_special1 VARCHAR(50), gr_special2 VARCHAR(50), gr_redundant VARCHAR(50), date_added DATETIME, source TEXT, source_ID VARCHAR(20));
 
+# Where am I getting information from.
+#  Consider: gr_redundant - needs to come from a csv - taxon name, group - else "None"
+#            gr_divisions - from NCBI Taxonomy, how to handle 'no ranks e.g stramenopiles/oomycetes'
+#            date_added   - needs to be MYSQL DATETIME formatted
+#            source       - user given URL
+#            source_ID    - user given Name
+
+
+
+
 # $dbh->connect_cached solves dropped connection problem! Awesome
 
 # DIRECTORY STRUCTURE
 our $working_directory = getcwd;
 
 # MYSQL CONFIG VARIABLES
-our $ds        = "dbi:mysql:proteins:127.0.0.1";
-our $tablename = "protein";
-our $user      = "cs02gl";
-our $password  = "ib54d01w";
+our $ds        = "dbi:mysql:new_protein:157.140.105.254";
+our $tablename = "orchard";
+our $user      = "orchard";
+our $password  = "jcsy4s8b";
 
 #####
 # USER VARIBALES
