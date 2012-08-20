@@ -13,12 +13,28 @@ use DateTime;
 
 # Where am I getting information from.
 #  Consider: gr_redundant - needs to come from a csv - taxon name, group - else "None"
-#            gr_divisions - from NCBI Taxonomy, how to handle 'no ranks e.g stramenopiles/oomycetes'
+#            gr_divisions - from NCBI Taxonomy, how to handle 'no ranks e.g stramenopiles/oomycetes' --> gr_special
 #            date_added   - needs to be MYSQL DATETIME formatted
 #            source       - user given URL
 #            source_ID    - user given Name
+# Warning: I am using INSERT IGNORE
 
 # NCBI Database from ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA
+
+###
+# MYSQL Commands to Clean NCBI Database after insertion
+# Step 1: - DELETE FROM orchard WHERE gr_superkingdom = '';
+# DONE
+# If you want to, you can order the table by taxa name
+# Query: ALTER TABLE orchard ORDER BY species;
+# but mysql doesn't really care what order the data is in
+# so it would only be aesthetic if you looked at it...
+# 
+### DO NOT USE THIS COMMAND ###
+# Query: TRUNCATE orchard; 
+# The above clears the entire database...useful during testing but
+# devasting otherwise...
+###
 
 # $dbh->connect_cached solves dropped connection problem! Awesome
 # DIRECTORY STRUCTURE
@@ -29,7 +45,7 @@ our $TEST_RUN = 0;
 #####
 # USER VARIBALES
 our $SEED             = "$WD\/nr_1.fasta";
-our $SPECIES_NAME     = $EMPTY;                                                      # set to EMPTY for NCBI
+our $SPECIES_NAME     = $EMPTY;                                                      # set to EMPTY for NCBI else give it you taxa name...
 our $SOURCE           = "NCBI nr FASTA ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA";
 our $SOURCE_ID        = "NCBI";
 our $OLD_SPECIES_LIST = "$WD\/old_species_list_info.txt";
@@ -70,6 +86,7 @@ sub plant_seed {
 
         # DATETIME values in 'YYYY-MM-DD HH:MM:SS'
         my $DATETIME = DateTime->now( time_zone => "local" )->datetime();
+        # Remove the erroneous T - not good for MYSQL
         $DATETIME =~ s/T/ /igs;
 
         #print "time = $DATETIME\n";
@@ -93,18 +110,30 @@ sub plant_seed {
             # >gi|82593694|gb|ABB84748.1| DHFR [Pneumocystis jirovecii]
             $defline_values[4] =~ m/(.*?)(\[)(.*?)(\])/is;
             $SPECIES_NAME = $3;
-            # Remove non-alphanumerics but keeps spaces that will screw with mysql!!
-            # This is going to cause upst with taxon names containing
-            # : or / but mostly they are strains of others
-            # so no taxonomy info will be retreived... I will filter those out
+            # Remove non-alphanumerics, but keeps spaces, that will screw with mysql insertion!!
+            # but I want to keep . and - as they might appear with sp. and hyphenated names
+            # This is going to cause upset with taxon names containing
+            # : or / but mostly they are strains/serotypes and there's plenty of their 'siblings'
+            # No taxonomy info will be retreived... I will filter those out
             # and truncate them from the mysql database, not that important (for our needs)
-            $SPECIES_NAME =~ s/[^\w \-\.]//g;
+            # See MYSQL section at top...
+            $SPECIES_NAME =~ s/\'//g; # remove pesly single quotes
+            $SPECIES_NAME =~ s/\:/\_/g; # replace colon with underscore
+            #$SPECIES_NAME =~ s/\-/\_/g; # replace dash with underscore
+
+            #$SPECIES_NAME =~ s/[^\w\d\s]//g;
+
+            #$SPECIES_NAME =~ s/[^\w \-\.]//g;
+            #$SPECIES_NAME =~ s/[^\w\d\s:]//g;
+            # but for some reason single quotes are getting through!!
+            # so lets just do another replace..
+            #$SPECIES_NAME =~ s/\'//g;
 
             if ( defined $SPECIES_NAME ) {
                 print "$seq_array_value Inserting $SPECIES_NAME\n";
 
                 # Get group division taxonomies
-                my %group_divisions = get_taxonomy($SPECIES_NAME);
+                my %group_divisions = get_taxonomy($SPECIES_NAME);  
 
 #print map { "$_ => $group_divisions{$_}\n" } keys %group_divisions;
 #cellular organisms[no rank]Eukaryota[superkingdom]Opisthokonta[no rank]Fungi[kingdom]Dikarya[subkingdom]Ascomycota[phylum]
@@ -147,7 +176,8 @@ sub plant_seed {
                 $seq_obj      = $db_obj->get_Seq_by_acc("$defline_values[1]");
                 $SPECIES_NAME = $seq_obj->species->binomial;
                 # Remove non-alphanumerics that will screw with mysql!!
-                $SPECIES_NAME =~ s/[^\w \-\.]//g;
+                $SPECIES_NAME =~ s/\'//g; # remove pesly single quotes
+                $SPECIES_NAME =~ s/\:/\_/g; # replace colon with underscore
                 print "$seq_array_value Inserting $SPECIES_NAME\n";
 
                 # Get group division taxonomies
@@ -265,7 +295,7 @@ sub mysql {
 
     # DEFINE A MySQL QUERY
     $statement = $dbh->prepare(
-"INSERT INTO $tablename (protein_ID, accession, species, sequence, gr_superkingdom, gr_kingdom, gr_phylum, gr_class, gr_order, gr_family, gr_special1, gr, date_added, source, source_ID, gr_subkingdom, gr_subphylum) VALUES ('$protein_ID', '$accession', '$SPECIES_NAME', '$sequence', '$gr_superkingdom', '$gr_kingdom', '$gr_phylum', '$gr_class', '$gr_order', '$gr_family', '$gr_special1', '$gr', '$date_added', '$source', '$source_ID', '$gr_subkingdom', '$gr_subphylum')"
+"INSERT IGNORE INTO $tablename (protein_ID, accession, species, sequence, gr_superkingdom, gr_kingdom, gr_phylum, gr_class, gr_order, gr_family, gr_special1, gr, date_added, source, source_ID, gr_subkingdom, gr_subphylum) VALUES ('$protein_ID', '$accession', '$SPECIES_NAME', '$sequence', '$gr_superkingdom', '$gr_kingdom', '$gr_phylum', '$gr_class', '$gr_order', '$gr_family', '$gr_special1', '$gr', '$date_added', '$source', '$source_ID', '$gr_subkingdom', '$gr_subphylum')"
     ) or die "\nError ($DBI::err):$DBI::errstr\n";
     $statement->execute or die "\nError ($DBI::err):$DBI::errstr\n";
 
