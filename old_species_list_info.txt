@@ -1,0 +1,895 @@
+Acaryochloris marina MBIC11017	Cyanobacteria
+Achlya hypogyna	oomycetes
+Acholeplasma laidlawii PG-8A	Mollicutes
+Acidiphilium cryptum JF-5	Alphaproteobacteria
+Acidobacteria bacterium Ellin345	Acidobacteria
+Acidothermus cellulolyticus 11B	Actinobacteria
+Acidovorax avenae subsp. citrulli AAC00-1	Betaproteobacteria
+Acidovorax sp. JS42	Betaproteobacteria
+Acinetobacter baumannii	Gammaproteobacteria
+Acinetobacter baumannii ATCC 17978	Gammaproteobacteria
+Acinetobacter sp. ADP1	Gammaproteobacteria
+Acremonium alcalophilum	fungi
+Actinobacillus pleuropneumoniae L20	Gammaproteobacteria
+Actinobacillus pleuropneumoniae serovar 3 str. JL03	Gammaproteobacteria
+Actinobacillus succinogenes 130Z	Gammaproteobacteria
+Aeromonas hydrophila subsp. hydrophila ATCC 7966	Gammaproteobacteria
+Aeromonas salmonicida subsp. salmonicida A449	Gammaproteobacteria
+Aeropyrum pernix K1	Crenarchaeota
+Agaricus bisporus	fungi
+Agrobacterium tumefaciens str. C58	Alphaproteobacteria
+Albugo candida	oomycete
+Alcanivorax borkumensis SK2	Gammaproteobacteria
+Alkalilimnicola ehrlichei MLHE-1	Gammaproteobacteria
+Alkaliphilus metalliredigens QYMF	Firmicutes
+Alkaliphilus oremlandii OhILAs	Firmicutes
+Allomyces macrogynus atcc 38327	fungi
+Alternaria brassicicola	fungi
+Anabaena variabilis ATCC 29413	Cyanobacteria
+Anaeromyxobacter dehalogenans 2CP-C	Deltaproteobacteria
+Anaeromyxobacter sp. Fw109-5	Deltaproteobacteria
+Anaplasma marginale str. St. Maries	Alphaproteobacteria
+Anaplasma phagocytophilum HZ	Alphaproteobacteria
+Aquifex aeolicus VF5	Aquificae
+Aquilegia coerulea 	plant
+Arabidopsis lyrata	plant
+Arabidopsis thaliana	plant
+Archaeoglobus fulgidus DSM 4304	Euryarchaeota
+Arcobacter butzleri RM4018	Epsilonproteobacteria
+Arthrobacter aurescens TC1	Actinobacteria
+Arthrobacter sp. FB24	Actinobacteria
+Ashbya gossypii	fungi
+Aspergillus aculeatus	fungi
+Aspergillus carbonarius	fungi
+Aspergillus clavatus	fungi
+Aspergillus flavus	fungi
+Aspergillus fumigatus	fungi
+Aspergillus nidulans	fungi
+Aspergillus niger	fungi
+Aspergillus oryzae	fungi
+Aspergillus terreus	fungi
+Aster yellows witches-broom phytoplasma AYWB	Mollicutes
+Aureococcus anophagefferens	stramenopile
+Auricularia delicata	fungi
+Azoarcus sp. BH72	Betaproteobacteria
+Azoarcus sp. EbN1	Betaproteobacteria
+Azorhizobium caulinodans ORS 571	Alphaproteobacteria
+Bacillus amyloliquefaciens FZB42	Firmicutes
+Bacillus anthracis str. Ames	Firmicutes
+Bacillus anthracis str. Ames Ancestor	Firmicutes
+Bacillus anthracis str. Sterne	Firmicutes
+Bacillus cereus ATCC 10987	Firmicutes
+Bacillus cereus ATCC 14579	Firmicutes
+Bacillus cereus E33L	Firmicutes
+Bacillus cereus subsp. cytotoxis NVH 391-98	Firmicutes
+Bacillus clausii KSM-K16	Firmicutes
+Bacillus halodurans C-125	Firmicutes
+Bacillus licheniformis ATCC 14580	Firmicutes
+Bacillus pumilus SAFR-032	Firmicutes
+Bacillus subtilis subsp. subtilis str. 168	Firmicutes
+Bacillus thuringiensis serovar konkukian str. 97-27	Firmicutes
+Bacillus thuringiensis str. Al Hakam	Firmicutes
+Bacillus weihenstephanensis KBAB4	Firmicutes
+Bacteroides fragilis NCTC 9343	Bacteroidetes
+Bacteroides fragilis YCH46	Bacteroidetes
+Bacteroides thetaiotaomicron VPI-5482	Bacteroidetes
+Bacteroides vulgatus ATCC 8482	Bacteroidetes
+Bartonella bacilliformis KC583	Alphaproteobacteria
+Bartonella henselae str. Houston-1	Alphaproteobacteria
+Bartonella quintana str. Toulouse	Alphaproteobacteria
+Bartonella tribocorum CIP 105476	Alphaproteobacteria
+Batrachochytrium dendrobatidis	fungi
+Baudoinia compniacensis	fungi
+Baumannia cicadellinicola str. Hc	Gammaproteobacteria
+Bdellovibrio bacteriovorus HD100	Deltaproteobacteria
+Beijerinckia indica subsp. indica ATCC 9039	Alphaproteobacteria
+Bifidobacterium adolescentis ATCC 15703	Actinobacteria
+Bifidobacterium longum NCC2705	Actinobacteria
+Bigelowiella natans	Rhizaria
+Bjerkandera adusta	fungi
+Blastocladiella emersonii	fungi
+Blastomyces dermatitidis	fungi
+Bordetella avium 197N	Betaproteobacteria
+Bordetella bronchiseptica RB50	Betaproteobacteria
+Bordetella parapertussis 12822	Betaproteobacteria
+Bordetella pertussis Tohama I	Betaproteobacteria
+Bordetella petrii DSM 12804	Betaproteobacteria
+Borrelia afzelii PKo	Spirochaetes
+Borrelia burgdorferi B31	Spirochaetes
+Borrelia garinii PBi	Spirochaetes
+Botrytis cinerea	fungi
+Brachypodium distachyon	plant
+Bradyrhizobium japonicum USDA 110	Alphaproteobacteria
+Bradyrhizobium sp. BTAi1	Alphaproteobacteria
+Bradyrhizobium sp. ORS278	Alphaproteobacteria
+Branchiostoma floridae	metazoa
+Brucella abortus biovar 1 str. 9-941	Alphaproteobacteria
+Brucella abortus S19	Alphaproteobacteria
+Brucella canis ATCC 23365	Alphaproteobacteria
+Brucella melitensis 16M	Alphaproteobacteria
+Brucella melitensis biovar Abortus 2308	Alphaproteobacteria
+Brucella ovis ATCC 25840	Alphaproteobacteria
+Brucella suis 1330	Alphaproteobacteria
+Brucella suis ATCC 23445	Alphaproteobacteria
+Buchnera aphidicola str. APS	Gammaproteobacteria
+Buchnera aphidicola str. Bp	Gammaproteobacteria
+Buchnera aphidicola str. Cc	Gammaproteobacteria
+Buchnera aphidicola str. Sg	Gammaproteobacteria
+Burkholderia ambifaria AMMD	Betaproteobacteria
+Burkholderia ambifaria MC40-6	Betaproteobacteria
+Burkholderia cenocepacia AU 1054	Betaproteobacteria
+Burkholderia cenocepacia HI2424	Betaproteobacteria
+Burkholderia cenocepacia MC0-3	Betaproteobacteria
+Burkholderia mallei ATCC 23344	Betaproteobacteria
+Burkholderia mallei NCTC 10229	Betaproteobacteria
+Burkholderia mallei NCTC 10247	Betaproteobacteria
+Burkholderia mallei SAVP1	Betaproteobacteria
+Burkholderia multivorans ATCC 17616	Betaproteobacteria
+Burkholderia pseudomallei 1106a	Betaproteobacteria
+Burkholderia pseudomallei 1710b	Betaproteobacteria
+Burkholderia pseudomallei 668	Betaproteobacteria
+Burkholderia pseudomallei K96243	Betaproteobacteria
+Burkholderia sp. 383	Betaproteobacteria
+Burkholderia thailandensis E264	Betaproteobacteria
+Burkholderia vietnamiensis G4	Betaproteobacteria
+Burkholderia xenovorans LB400	Betaproteobacteria
+Caenorhabditis elegans	metazoa
+Caldicellulosiruptor saccharolyticus DSM 8903	Firmicutes
+Caldivirga maquilingensis IC-167	Crenarchaeota
+Campylobacter concisus 13826	Epsilonproteobacteria
+Campylobacter curvus 525.92	Epsilonproteobacteria
+Campylobacter fetus subsp. fetus 82-40	Epsilonproteobacteria
+Campylobacter hominis ATCC BAA-381	Epsilonproteobacteria
+Campylobacter jejuni RM1221	Epsilonproteobacteria
+Campylobacter jejuni subsp. doylei 269.97	Epsilonproteobacteria
+Campylobacter jejuni subsp. jejuni 81-176	Epsilonproteobacteria
+Campylobacter jejuni subsp. jejuni 81116	Epsilonproteobacteria
+Campylobacter jejuni subsp. jejuni NCTC 11168	Epsilonproteobacteria
+Candida albicans SC5314	fungi
+Candida caseinolytica	fungi
+Candida glabrata	fungi
+Candida tenuis	fungi
+Candidatus Blochmannia floridanus	Gammaproteobacteria
+Candidatus Blochmannia pennsylvanicus str. BPEN	Gammaproteobacteria
+Candidatus Carsonella ruddii PV	Gammaproteobacteria
+Candidatus Desulforudis audaxviator MP104C	Firmicutes
+Candidatus Korarchaeum cryptofilum OPF8	Korarchaeota
+Candidatus Methanoregula boonei 6A8	Euryarchaeota
+Candidatus Pelagibacter ubique HTCC1062	Alphaproteobacteria
+Candidatus Protochlamydia amoebophila UWE25	Chlamydiae
+Candidatus Ruthia magnifica str. Cm	Gammaproteobacteria
+Candidatus Sulcia muelleri GWSS	Bacteroidetes
+Candidatus Vesicomyosocius okutanii HA	Gammaproteobacteria
+Capitella sp. I	metazoa
+Capsaspora owczarzaki	metazoa
+Carboxydothermus hydrogenoformans Z-2901	Firmicutes
+Carica papaya	plant
+Caulobacter crescentus CB15	Alphaproteobacteria
+Caulobacter sp. K31	Alphaproteobacteria
+Ceriporiopsis subvermispora	fungi
+Chaetomium globosum	fungi
+Chlamydia muridarum Nigg	Chlamydiae
+Chlamydia trachomatis 434 Bu	Chlamydiae
+Chlamydia trachomatis A HAR-13	Chlamydiae
+Chlamydia trachomatis D UW-3 CX	Chlamydiae
+Chlamydia trachomatis L2b UCH-1 proctitis	Chlamydiae
+Chlamydomonas reinhardtii	chlorophyte
+Chlamydophila abortus S26 3	Chlamydiae
+Chlamydophila caviae GPIC	Chlamydiae
+Chlamydophila felis Fe C-56	Chlamydiae
+Chlamydophila pneumoniae AR39	Chlamydiae
+Chlamydophila pneumoniae CWL029	Chlamydiae
+Chlamydophila pneumoniae J138	Chlamydiae
+Chlamydophila pneumoniae TW-183	Chlamydiae
+Chlorella NC64A	chlorophyte
+Chlorobium chlorochromatii CaD3	Chlorobi
+Chlorobium phaeobacteroides DSM 266	Chlorobi
+Chlorobium tepidum TLS	Chlorobi
+Chloroflexus aurantiacus J-10-fl	Chloroflexi
+Chromobacterium violaceum ATCC 12472	Betaproteobacteria
+Chromohalobacter salexigens DSM 3043	Gammaproteobacteria
+Ciona intestinalis	metazoa
+Citrobacter koseri ATCC BAA-895	Gammaproteobacteria
+Citrus clementina 	plant
+Citrus sinensis 	plant
+Clavibacter michiganensis subsp. michiganensis NCPPB 382	Actinobacteria
+Clavibacter michiganensis subsp. sepedonicus	Actinobacteria
+Clostridium acetobutylicum ATCC 824	Firmicutes
+Clostridium beijerinckii NCIMB 8052	Firmicutes
+Clostridium botulinum A str. ATCC 19397	Firmicutes
+Clostridium botulinum A str. ATCC 3502	Firmicutes
+Clostridium botulinum A str. Hall	Firmicutes
+Clostridium botulinum A3 str. Loch Maree	Firmicutes
+Clostridium botulinum B str. Eklund 17B	Firmicutes
+Clostridium botulinum B1 str. Okra	Firmicutes
+Clostridium botulinum F str. Langeland	Firmicutes
+Clostridium difficile 630	Firmicutes
+Clostridium kluyveri DSM 555	Firmicutes
+Clostridium novyi NT	Firmicutes
+Clostridium perfringens ATCC 13124	Firmicutes
+Clostridium perfringens phage phiSM101	Firmicutes
+Clostridium perfringens SM101	Firmicutes
+Clostridium perfringens str. 13	Firmicutes
+Clostridium phytofermentans ISDg	Firmicutes
+Clostridium tetani E88	Firmicutes
+Clostridium thermocellum ATCC 27405	Firmicutes
+Coccidioides immitis	fungi
+Coccidioides posadasii	fungi
+Coccomyxa C169	chlorophyte
+Cochliobolus heterostrophus	fungi
+Cochliobolus sativus	fungi
+Colwellia psychrerythraea 34H	Gammaproteobacteria
+Coniophora puteana	fungi
+Coprinus cinereus	fungi
+Corynebacterium diphtheriae NCTC 13129	Actinobacteria
+Corynebacterium efficiens YS-314	Actinobacteria
+Corynebacterium glutamicum ATCC 13032	Actinobacteria
+Corynebacterium glutamicum R	Actinobacteria
+Corynebacterium jeikeium K411	Actinobacteria
+Corynebacterium urealyticum DSM 7109	Actinobacteria
+Coxiella burnetii Dugway 5J108-111	Gammaproteobacteria
+Coxiella burnetii RSA 331	Gammaproteobacteria
+Coxiella burnetii RSA 493	Gammaproteobacteria
+Cryphonectria parasitica	fungi
+Cryptococcus neoformans	fungi
+Cryptosporidium parvum	alveolate
+Cucumis sativus	plant
+Cupriavidus taiwanensis	Betaproteobacteria
+Cyanidioschyzon merolae	rhodophyte
+Cyanophora paradoxa	Glaucophyte
+Cyanothece sp. ATCC 51142	Cyanobacteria
+Cytophaga hutchinsonii ATCC 33406	Bacteroidetes
+Dacryopinax sp	fungi
+Danio rerio	metazoa
+Daphnia pulex	metazoa
+Debaryomyces hansenii	fungi
+Dechloromonas aromatica RCB	Betaproteobacteria
+Dehalococcoides ethenogenes 195	Chloroflexi
+Dehalococcoides sp. BAV1	Chloroflexi
+Dehalococcoides sp. CBDB1	Chloroflexi
+Deinococcus geothermalis DSM 11300	Deinococci
+Deinococcus radiodurans R1	Deinococci
+Delftia acidovorans SPH-1	Betaproteobacteria
+Desulfitobacterium hafniense Y51	Firmicutes
+Desulfococcus oleovorans Hxd3	Deltaproteobacteria
+Desulfotalea psychrophila LSv54	Deltaproteobacteria
+Desulfotomaculum reducens MI-1	Firmicutes
+Desulfovibrio desulfuricans G20	Deltaproteobacteria
+Desulfovibrio vulgaris subsp. vulgaris DP4	Deltaproteobacteria
+Desulfovibrio vulgaris subsp. vulgaris str. Hildenborough	Deltaproteobacteria
+Dichelobacter nodosus VCS1703A	Gammaproteobacteria
+Dichomitus squalens	fungi
+Dictyostelium discoideum	amoebozoa
+Dictyostelium purpureum	amoebozoa
+Dinoroseobacter shibae DFL 12	Alphaproteobacteria
+Dothistroma septosporum	fungi
+Drosophila melanogaster	metazoa
+Ectocarpus siliculosus	Chromalveolata
+Ehrlichia canis str. Jake	Alphaproteobacteria
+Ehrlichia chaffeensis str. Arkansas	Alphaproteobacteria
+Ehrlichia ruminantium str. Gardel	Alphaproteobacteria
+Ehrlichia ruminantium str. Welgevonden	Alphaproteobacteria
+Emiliania huxleyi	haptophyte
+Encephalitozoon cuniculi	fungi
+Entamoeba histolytica	amoebozoa
+Enterobacter sakazakii ATCC BAA-894	Gammaproteobacteria
+Enterobacter sp. 638	Gammaproteobacteria
+Enterococcus faecalis V583	Firmicutes
+Erwinia carotovora subsp. atroseptica SCRI1043	Gammaproteobacteria
+Erythrobacter litoralis HTCC2594	Alphaproteobacteria
+Escherichia coli 536	Gammaproteobacteria
+Escherichia coli APEC O1	Gammaproteobacteria
+Escherichia coli ATCC 8739	Gammaproteobacteria
+Escherichia coli CFT073	Gammaproteobacteria
+Escherichia coli E24377A	Gammaproteobacteria
+Escherichia coli HS	Gammaproteobacteria
+Escherichia coli O157 H7 EDL933	Gammaproteobacteria
+Escherichia coli O157 H7 str. Sakai	Gammaproteobacteria
+Escherichia coli SECEC SMS-3-5	Gammaproteobacteria
+Escherichia coli str. K-12 substr. DH10B	Gammaproteobacteria
+Escherichia coli str. K-12 substr. MG1655	Gammaproteobacteria
+Escherichia coli UTI89	Gammaproteobacteria
+Escherichia coli W3110	Gammaproteobacteria
+Eucalyptus grandis	plant
+Exiguobacterium sibiricum 255-15	Firmicutes
+Fervidobacterium nodosum Rt17-B1	Thermotogae
+Finegoldia magna ATCC 29328	Firmicutes
+Flavobacterium johnsoniae UW101	Bacteroidetes
+Flavobacterium psychrophilum JIP02 86	Bacteroidetes
+Fomitiporia mediterranea	fungi
+Fomitopsis pinicola	fungi
+Fragilariopsis cylindrus	stramenopile
+Francisella philomiragia subsp. philomiragia ATCC 25017	Gammaproteobacteria
+Francisella tularensis subsp. holarctica	Gammaproteobacteria
+Francisella tularensis subsp. holarctica FTNF002-00	Gammaproteobacteria
+Francisella tularensis subsp. holarctica OSU18	Gammaproteobacteria
+Francisella tularensis subsp. mediasiatica FSC147	Gammaproteobacteria
+Francisella tularensis subsp. novicida U112	Gammaproteobacteria
+Francisella tularensis subsp. tularensis FSC198	Gammaproteobacteria
+Francisella tularensis subsp. tularensis SCHU S4	Gammaproteobacteria
+Francisella tularensis subsp. tularensis WY96-3418	Gammaproteobacteria
+Frankia alni ACN14a	Actinobacteria
+Frankia sp. CcI3	Actinobacteria
+Frankia sp. EAN1pec	Actinobacteria
+Fusarium graminearum	fungi
+Fusarium oxysporum	fungi
+Fusarium verticillioides	fungi
+Fusobacterium nucleatum subsp. nucleatum ATCC 25586	Fusobacteria
+Galdieria sulphuraria	red algae
+Gallus gallus	metazoa
+Ganoderma sp	fungi
+Geobacillus kaustophilus HTA426	Firmicutes
+Geobacillus thermodenitrificans NG80-2	Firmicutes
+Geobacter metallireducens GS-15	Deltaproteobacteria
+Geobacter sulfurreducens PCA	Deltaproteobacteria
+Geobacter uraniireducens Rf4	Deltaproteobacteria
+Giardia lamblia	excavate
+Gloeobacter violaceus PCC 7421	Cyanobacteria
+Gloeophyllum trabeum	fungi
+Gluconacetobacter diazotrophicus PAl 5	Alphaproteobacteria
+Gluconobacter oxydans 621H	Alphaproteobacteria
+Glycine max	plant
+Gonapodya prolifera	fungi
+Gramella forsetii KT0803	Bacteroidetes
+Granulibacter bethesdensis CGDNIH1	Alphaproteobacteria
+Guillardia theta	Cryptophyta
+Haemophilus ducreyi 35000HP	Gammaproteobacteria
+Haemophilus influenzae 86-028NP	Gammaproteobacteria
+Haemophilus influenzae PittEE	Gammaproteobacteria
+Haemophilus influenzae PittGG	Gammaproteobacteria
+Haemophilus influenzae Rd KW20	Gammaproteobacteria
+Haemophilus somnus 129PT	Gammaproteobacteria
+Haemophilus somnus 2336	Gammaproteobacteria
+Hahella chejuensis KCTC 2396	Gammaproteobacteria
+Haloarcula marismortui ATCC 43049	Euryarchaeota
+Halobacterium salinarum R1	Euryarchaeota
+Halobacterium sp. NRC-1	Euryarchaeota
+Haloquadratum walsbyi DSM 16790	Euryarchaeota
+Halorhodospira halophila SL1	Gammaproteobacteria
+Hansenula polymorpha NCYC 495 leu1.1	fungi
+Helicobacter acinonychis str. Sheeba	Epsilonproteobacteria
+Helicobacter hepaticus ATCC 51449	Epsilonproteobacteria
+Helicobacter pylori 26695	Epsilonproteobacteria
+Helicobacter pylori HPAG1	Epsilonproteobacteria
+Helicobacter pylori J99	Epsilonproteobacteria
+Heliobacterium modesticaldum Ice1	Firmicutes
+Helobdella robusta	metazoa
+Herminiimonas arsenicoxydans	Betaproteobacteria
+Herpetosiphon aurantiacus ATCC 23779	Chloroflexi
+Heterobasidion annosum	fungi
+Histoplasma capsulatum	fungi
+Homo sapiens	metazoa
+Hyaloperonospora parasitica	oomycete
+Hyperthermus butylicus DSM 5456	Crenarchaeota
+Hyphochytrium catenoides	fungi
+Hyphomonas neptunium ATCC 15444	Alphaproteobacteria
+Hysterium pulicare	fungi
+Idiomarina loihiensis L2TR	Gammaproteobacteria
+Ignicoccus hospitalis KIN4 I	Crenarchaeota
+Jannaschia sp. CCS1	Alphaproteobacteria
+Janthinobacterium sp. Marseille	Betaproteobacteria
+Kineococcus radiotolerans SRS30216	Actinobacteria
+Klebsiella pneumoniae subsp. pneumoniae MGH 78578	Gammaproteobacteria
+Laccaria bicolor	fungi
+Lactobacillus acidophilus NCFM	Firmicutes
+Lactobacillus brevis ATCC 367	Firmicutes
+Lactobacillus casei ATCC 334	Firmicutes
+Lactobacillus delbrueckii subsp. bulgaricus ATCC 11842	Firmicutes
+Lactobacillus delbrueckii subsp. bulgaricus ATCC BAA-365	Firmicutes
+Lactobacillus fermentum IFO 3956	Firmicutes
+Lactobacillus gasseri ATCC 33323	Firmicutes
+Lactobacillus helveticus DPC 4571	Firmicutes
+Lactobacillus johnsonii NCC 533	Firmicutes
+Lactobacillus plantarum WCFS1	Firmicutes
+Lactobacillus reuteri F275	Firmicutes
+Lactobacillus sakei subsp. sakei 23K	Firmicutes
+Lactobacillus salivarius UCC118	Firmicutes
+Lactococcus lactis subsp. cremoris MG1363	Firmicutes
+Lactococcus lactis subsp. cremoris SK11	Firmicutes
+Lactococcus lactis subsp. lactis Il1403	Firmicutes
+Lawsonia intracellularis PHE MN1-00	Deltaproteobacteria
+Legionella pneumophila str. Corby	Gammaproteobacteria
+Legionella pneumophila str. Lens	Gammaproteobacteria
+Legionella pneumophila str. Paris	Gammaproteobacteria
+Legionella pneumophila subsp. pneumophila str. Philadelphia 1	Gammaproteobacteria
+Leifsonia xyli subsp. xyli str. CTCB07	Actinobacteria
+Leishmania major	excavate
+Leptosphaeria maculans	fungi
+Leptospira biflexa serovar Patoc strain Patoc 1	Spirochaetes
+Leptospira borgpetersenii serovar Hardjo-bovis JB197	Spirochaetes
+Leptospira borgpetersenii serovar Hardjo-bovis L550	Spirochaetes
+Leptospira interrogans serovar Copenhageni str. Fiocruz L1-130	Spirochaetes
+Leptospira interrogans serovar Lai str. 56601	Spirochaetes
+Leptothrix cholodnii SP-6	Betaproteobacteria
+Leuconostoc citreum KM20	Firmicutes
+Leuconostoc mesenteroides subsp. mesenteroides ATCC 8293	Firmicutes
+Lipomyces starkeyi	fungi
+Listeria innocua Clip11262	Firmicutes
+Listeria monocytogenes EGD-e	Firmicutes
+Listeria monocytogenes str. 4b F2365	Firmicutes
+Listeria welshimeri serovar 6b str. SLCC5334	Firmicutes
+Lottia gigantea	metazoa
+Lysinibacillus sphaericus C3-41	Firmicutes
+Magnaporthe grisea	fungi
+Magnetococcus sp. MC-1	unclassified Proteobacteria
+Magnetospirillum magneticum AMB-1	Alphaproteobacteria
+Malassezia globosa	fungi
+Manihot esculenta	plant
+Mannheimia succiniciproducens MBEL55E	Gammaproteobacteria
+Maricaulis maris MCS10	Alphaproteobacteria
+Marinobacter aquaeolei VT8	Gammaproteobacteria
+Marinomonas sp. MWYL1	Gammaproteobacteria
+Medicago truncatula	plant
+Melampsora laricis-populina	fungi
+Mesoplasma florum L1	Mollicutes
+Mesorhizobium loti MAFF303099	Alphaproteobacteria
+Mesorhizobium sp. BNC1	Alphaproteobacteria
+Metallosphaera sedula DSM 5348	Crenarchaeota
+Methanobrevibacter smithii ATCC 35061	Euryarchaeota
+Methanocaldococcus jannaschii DSM 2661	Euryarchaeota
+Methanococcoides burtonii DSM 6242	Euryarchaeota
+Methanococcus aeolicus Nankai-3	Euryarchaeota
+Methanococcus maripaludis C5	Euryarchaeota
+Methanococcus maripaludis C6	Euryarchaeota
+Methanococcus maripaludis C7	Euryarchaeota
+Methanococcus maripaludis S2	Euryarchaeota
+Methanococcus vannielii SB	Euryarchaeota
+Methanocorpusculum labreanum Z	Euryarchaeota
+Methanoculleus marisnigri JR1	Euryarchaeota
+Methanopyrus kandleri AV19	Euryarchaeota
+Methanosaeta thermophila PT	Euryarchaeota
+Methanosarcina acetivorans C2A	Euryarchaeota
+Methanosarcina barkeri str. Fusaro	Euryarchaeota
+Methanosarcina mazei Go1	Euryarchaeota
+Methanosphaera stadtmanae DSM 3091	Euryarchaeota
+Methanospirillum hungatei JF-1	Euryarchaeota
+Methanothermobacter thermautotrophicus str. Delta H	Euryarchaeota
+Methylibium petroleiphilum PM1	Betaproteobacteria
+Methylobacillus flagellatus KT	Betaproteobacteria
+Methylobacterium extorquens PA1	Alphaproteobacteria
+Methylobacterium radiotolerans JCM 2831	Alphaproteobacteria
+Methylobacterium sp. 4-46	Alphaproteobacteria
+Methylococcus capsulatus str. Bath	Gammaproteobacteria
+Microcystis aeruginosa NIES-843	Cyanobacteria
+Micromonas pusilla CCMP1545	chlorophyta
+Micromonas sp RCC299	chlorophyta
+Microsporum canis	fungi
+Microsporum gypseum	fungi
+Mimulus guttatus	plant
+Monosiga brevicollis	metazoa
+Moorella thermoacetica ATCC 39073	Firmicutes
+Mucor circinelloides	fungi
+Mus musculus	metazoa
+Mycobacterium abscessus	Actinobacteria
+Mycobacterium avium 104	Actinobacteria
+Mycobacterium avium subsp. paratuberculosis K-10	Actinobacteria
+Mycobacterium bovis AF2122 97	Actinobacteria
+Mycobacterium bovis BCG str. Pasteur 1173P2	Actinobacteria
+Mycobacterium gilvum PYR-GCK	Actinobacteria
+Mycobacterium leprae TN	Actinobacteria
+Mycobacterium marinum M	Actinobacteria
+Mycobacterium smegmatis str. MC2 155	Actinobacteria
+Mycobacterium sp. JLS	Actinobacteria
+Mycobacterium sp. KMS	Actinobacteria
+Mycobacterium sp. MCS	Actinobacteria
+Mycobacterium tuberculosis CDC1551	Actinobacteria
+Mycobacterium tuberculosis F11	Actinobacteria
+Mycobacterium tuberculosis H37Ra	Actinobacteria
+Mycobacterium tuberculosis H37Rv	Actinobacteria
+Mycobacterium ulcerans Agy99	Actinobacteria
+Mycobacterium vanbaalenii PYR-1	Actinobacteria
+Mycoplasma agalactiae PG2	Mollicutes
+Mycoplasma capricolum subsp. capricolum ATCC 27343	Mollicutes
+Mycoplasma gallisepticum R	Mollicutes
+Mycoplasma genitalium G37	Mollicutes
+Mycoplasma hyopneumoniae 232	Mollicutes
+Mycoplasma hyopneumoniae 7448	Mollicutes
+Mycoplasma hyopneumoniae J	Mollicutes
+Mycoplasma mobile 163K	Mollicutes
+Mycoplasma mycoides subsp. mycoides SC str. PG1	Mollicutes
+Mycoplasma penetrans HF-2	Mollicutes
+Mycoplasma pneumoniae M129	Mollicutes
+Mycoplasma pulmonis UAB CTIP	Mollicutes
+Mycoplasma synoviae 53	Mollicutes
+Mycosphaerella fijiensis	fungi
+Mycosphaerella graminicola	fungi
+Myxococcus xanthus DK 1622	Deltaproteobacteria
+Naegleria gruberi	excavate
+Nanoarchaeum equitans Kin4-M	Nanoarchaeota
+Natronomonas pharaonis DSM 2160	Euryarchaeota
+Nectria haematococca	fungi
+Neisseria gonorrhoeae FA 1090	Betaproteobacteria
+Neisseria meningitidis 053442	Betaproteobacteria
+Neisseria meningitidis FAM18	Betaproteobacteria
+Neisseria meningitidis MC58	Betaproteobacteria
+Neisseria meningitidis Z2491	Betaproteobacteria
+Nematostella vectensis	metazoa
+Neorickettsia sennetsu str. Miyayama	Alphaproteobacteria
+Neosartorya fischeri	fungi
+Neurospora crassa	fungi
+Neurospora tetrasperma	fungi
+Nitratiruptor sp. SB155-2	Epsilonproteobacteria
+Nitrobacter hamburgensis X14	Alphaproteobacteria
+Nitrobacter winogradskyi Nb-255	Alphaproteobacteria
+Nitrosococcus oceani ATCC 19707	Gammaproteobacteria
+Nitrosomonas europaea ATCC 19718	Betaproteobacteria
+Nitrosomonas eutropha C91	Betaproteobacteria
+Nitrosopumilus maritimus SCM1	Thaumarchaeota
+Nitrosospira multiformis ATCC 25196	Betaproteobacteria
+Nocardia farcinica IFM 10152	Actinobacteria
+Nocardioides sp. JS614	Actinobacteria
+Nostoc sp. PCC 7120	Cyanobacteria
+Novosphingobium aromaticivorans DSM 12444	Alphaproteobacteria
+Oceanobacillus iheyensis HTE831	Firmicutes
+Ochrobactrum anthropi ATCC 49188	Alphaproteobacteria
+Oenococcus oeni PSU-1	Firmicutes
+Onion yellows phytoplasma OY-M	Mollicutes
+Opitutus terrae PB90-1	Verrucomicrobia
+Orientia tsutsugamushi Boryong	Alphaproteobacteria
+Oryza sativa	plant
+Ostreococcus lucimarinus	chlorophyta
+Ostreococcus sp RCC809	chlorophyta
+Ostreococcus tauri	chlorophyta
+Parabacteroides distasonis ATCC 8503	Bacteroidetes
+Paracoccidioides brasiliensis	fungi
+Paracoccus denitrificans PD1222	Alphaproteobacteria
+Paramecium tetraurelia	alveolate
+Parvibaculum lavamentivorans DS-1	Alphaproteobacteria
+Pasteurella multocida subsp. multocida str. Pm70	Gammaproteobacteria
+Pediococcus pentosaceus ATCC 25745	Firmicutes
+Pelobacter carbinolicus DSM 2380	Deltaproteobacteria
+Pelobacter propionicus DSM 2379	Deltaproteobacteria
+Pelodictyon luteolum DSM 273	Chlorobi
+Pelotomaculum thermopropionicum SI	Firmicutes
+Petrotoga mobilis SJ95	Thermotogae
+Phaeodactylum tricornutum	stramenopile
+Phanerochaete carnosa	fungi
+Phanerochaete chrysosporium	fungi
+Phlebia brevispora	fungi
+Phlebiopsis gigantea	fungi
+Photobacterium profundum SS9	Gammaproteobacteria
+Photorhabdus luminescens subsp. laumondii TTO1	Gammaproteobacteria
+Phycomyces blakesleeanus	fungi
+Physcomitrella patens	plant
+Phytophthora capsici	oomycete
+Phytophthora infestans	oomycete
+Phytophthora ramorum	oomycete
+Phytophthora sojae	oomycete
+Pichia membranifaciens	fungi
+Pichia stipitis	fungi
+Picrophilus torridus DSM 9790	Euryarchaeota
+Piromyces sp	fungi
+Plasmodium yoelii	alveolate
+Pleurotus ostreatus PC15	fungi
+Pleurotus ostreatus PC9	fungi
+Pneumocystis carinii	fungi
+Pneumocystis jirovecii	fungi
+Podospora anserina	fungi
+Polaromonas naphthalenivorans CJ2	Betaproteobacteria
+Polaromonas sp. JS666	Betaproteobacteria
+Polynucleobacter necessarius STIR1	Betaproteobacteria
+Polynucleobacter sp. QLW-P1DMWA-1	Betaproteobacteria
+Populus trichocarpa	plant
+Porphyra umbilicalis	red algae
+Porphyridium cruentum	red algae
+Porphyromonas gingivalis W83	Bacteroidetes
+Postia placenta	fungi
+Prochlorococcus marinus str. AS9601	Cyanobacteria
+Prochlorococcus marinus str. MIT 9211	Cyanobacteria
+Prochlorococcus marinus str. MIT 9215	Cyanobacteria
+Prochlorococcus marinus str. MIT 9301	Cyanobacteria
+Prochlorococcus marinus str. MIT 9303	Cyanobacteria
+Prochlorococcus marinus str. MIT 9312	Cyanobacteria
+Prochlorococcus marinus str. MIT 9313	Cyanobacteria
+Prochlorococcus marinus str. MIT 9515	Cyanobacteria
+Prochlorococcus marinus str. NATL1A	Cyanobacteria
+Prochlorococcus marinus str. NATL2A	Cyanobacteria
+Prochlorococcus marinus subsp. marinus str. CCMP1375	Cyanobacteria
+Prochlorococcus marinus subsp. pastoris str. CCMP1986	Cyanobacteria
+Propionibacterium acnes KPA171202	Actinobacteria
+Prosthecochloris vibrioformis DSM 265	Chlorobi
+Prunus persica	plant
+Pseudoalteromonas atlantica T6c	Gammaproteobacteria
+Pseudoalteromonas haloplanktis TAC125	Gammaproteobacteria
+Pseudomonas aeruginosa PA7	Gammaproteobacteria
+Pseudomonas aeruginosa PAO1	Gammaproteobacteria
+Pseudomonas aeruginosa UCBPP-PA14	Gammaproteobacteria
+Pseudomonas entomophila L48	Gammaproteobacteria
+Pseudomonas fluorescens Pf-5	Gammaproteobacteria
+Pseudomonas fluorescens PfO-1	Gammaproteobacteria
+Pseudomonas mendocina ymp	Gammaproteobacteria
+Pseudomonas putida F1	Gammaproteobacteria
+Pseudomonas putida GB-1	Gammaproteobacteria
+Pseudomonas putida KT2440	Gammaproteobacteria
+Pseudomonas putida W619	Gammaproteobacteria
+Pseudomonas stutzeri A1501	Gammaproteobacteria
+Pseudomonas syringae pv. phaseolicola 1448A	Gammaproteobacteria
+Pseudomonas syringae pv. syringae B728a	Gammaproteobacteria
+Pseudomonas syringae pv. tomato str. DC3000	Gammaproteobacteria
+Psychrobacter arcticus 273-4	Gammaproteobacteria
+Psychrobacter cryohalolentis K5	Gammaproteobacteria
+Psychrobacter sp. PRwf-1	Gammaproteobacteria
+Psychromonas ingrahamii 37	Gammaproteobacteria
+Puccinia graminis	fungi
+Punctularia strigosozonata	fungi
+Pyrenophora teres	fungi
+Pyrenophora tritici-repentis	fungi
+Pyrobaculum aerophilum str. IM2	Crenarchaeota
+Pyrobaculum arsenaticum DSM 13514	Crenarchaeota
+Pyrobaculum calidifontis JCM 11548	Crenarchaeota
+Pyrobaculum islandicum DSM 4184	Crenarchaeota
+Pyrococcus abyssi GE5	Euryarchaeota
+Pyrococcus furiosus DSM 3638	Euryarchaeota
+Pyrococcus horikoshii OT3	Euryarchaeota
+Pythium ultimum	oomycete
+Ralstonia eutropha H16	Betaproteobacteria
+Ralstonia eutropha JMP134	Betaproteobacteria
+Ralstonia metallidurans CH34	Betaproteobacteria
+Ralstonia solanacearum GMI1000	Betaproteobacteria
+Renibacterium salmoninarum ATCC 33209	Actinobacteria
+Rhizobium etli CFN 42	Alphaproteobacteria
+Rhizobium leguminosarum bv. viciae 3841	Alphaproteobacteria
+Rhizopus oryzae	fungi
+Rhodobacter sphaeroides 2.4.1	Alphaproteobacteria
+Rhodobacter sphaeroides ATCC 17025	Alphaproteobacteria
+Rhodobacter sphaeroides ATCC 17029	Alphaproteobacteria
+Rhodococcus sp. RHA1	Actinobacteria
+Rhodoferax ferrireducens T118	Betaproteobacteria
+Rhodopirellula baltica SH 1	Planctomycetes
+Rhodopseudomonas palustris BisA53	Alphaproteobacteria
+Rhodopseudomonas palustris BisB18	Alphaproteobacteria
+Rhodopseudomonas palustris BisB5	Alphaproteobacteria
+Rhodopseudomonas palustris CGA009	Alphaproteobacteria
+Rhodopseudomonas palustris HaA2	Alphaproteobacteria
+Rhodospirillum rubrum ATCC 11170	Alphaproteobacteria
+Rhodotorula graminis	fungi
+Rhystidhysteron rufulum	fungi
+Ricinus communis	plant
+Rickettsia akari str. Hartford	Alphaproteobacteria
+Rickettsia bellii OSU 85-389	Alphaproteobacteria
+Rickettsia bellii RML369-C	Alphaproteobacteria
+Rickettsia canadensis str. McKiel	Alphaproteobacteria
+Rickettsia conorii str. Malish 7	Alphaproteobacteria
+Rickettsia felis URRWXCal2	Alphaproteobacteria
+Rickettsia massiliae MTU5	Alphaproteobacteria
+Rickettsia prowazekii str. Madrid E	Alphaproteobacteria
+Rickettsia rickettsii str. Iowa	Alphaproteobacteria
+Rickettsia rickettsii str. Sheila Smith	Alphaproteobacteria
+Rickettsia typhi str. Wilmington	Alphaproteobacteria
+Roseiflexus castenholzii DSM 13941	Chloroflexi
+Roseiflexus sp. RS-1	Chloroflexi
+Roseobacter denitrificans OCh 114	Alphaproteobacteria
+Rubrobacter xylanophilus DSM 9941	Actinobacteria
+Saccharomyces cerevisiae	fungi
+Saccharophagus degradans 2-40	Gammaproteobacteria
+Saccharopolyspora erythraea NRRL 2338	Actinobacteria
+Salinibacter ruber DSM 13855	Bacteroidetes
+Salinispora arenicola CNS-205	Actinobacteria
+Salinispora tropica CNB-440	Actinobacteria
+Salmonella enterica subsp. arizonae serovar 62	Gammaproteobacteria
+Salmonella enterica subsp. enterica serovar Choleraesuis str. SC-B67	Gammaproteobacteria
+Salmonella enterica subsp. enterica serovar Paratyphi A str. ATCC 9150	Gammaproteobacteria
+Salmonella enterica subsp. enterica serovar Paratyphi B str. SPB7	Gammaproteobacteria
+Salmonella enterica subsp. enterica serovar Typhi str. CT18	Gammaproteobacteria
+Salmonella enterica subsp. enterica serovar Typhi Ty2	Gammaproteobacteria
+Salmonella typhimurium LT2	Gammaproteobacteria
+Salpingoeca rosetta	choanozoa
+Schizophyllum commune	fungi
+Schizosaccharomyces cryophilus	fungi
+Schizosaccharomyces japonicus	fungi
+Schizosaccharomyces octosporus	fungi
+Schizosaccharomyces pombe	fungi
+Sclerotinia sclerotiorum	fungi
+Selaginella moellendorffii	plant
+Septoria musiva	fungi
+Septoria populicola	fungi
+Serpula lacrymans	fungi
+Serratia proteamaculans 568	Gammaproteobacteria
+Setaria italica	plant
+Setosphaeria turcica	fungi
+Shewanella amazonensis SB2B	Gammaproteobacteria
+Shewanella baltica OS155	Gammaproteobacteria
+Shewanella baltica OS185	Gammaproteobacteria
+Shewanella baltica OS195	Gammaproteobacteria
+Shewanella denitrificans OS217	Gammaproteobacteria
+Shewanella frigidimarina NCIMB 400	Gammaproteobacteria
+Shewanella halifaxensis HAW-EB4	Gammaproteobacteria
+Shewanella loihica PV-4	Gammaproteobacteria
+Shewanella oneidensis MR-1	Gammaproteobacteria
+Shewanella pealeana ATCC 700345	Gammaproteobacteria
+Shewanella putrefaciens CN-32	Gammaproteobacteria
+Shewanella sediminis HAW-EB3	Gammaproteobacteria
+Shewanella sp. ANA-3	Gammaproteobacteria
+Shewanella sp. MR-4	Gammaproteobacteria
+Shewanella sp. MR-7	Gammaproteobacteria
+Shewanella sp. W3-18-1	Gammaproteobacteria
+Shewanella woodyi ATCC 51908	Gammaproteobacteria
+Shigella boydii CDC 3083-94	Gammaproteobacteria
+Shigella boydii Sb227	Gammaproteobacteria
+Shigella dysenteriae Sd197	Gammaproteobacteria
+Shigella flexneri 2a str. 2457T	Gammaproteobacteria
+Shigella flexneri 2a str. 301	Gammaproteobacteria
+Shigella flexneri 5 str. 8401	Gammaproteobacteria
+Shigella sonnei Ss046	Gammaproteobacteria
+Silicibacter pomeroyi DSS-3	Alphaproteobacteria
+Silicibacter sp. TM1040	Alphaproteobacteria
+Sinorhizobium medicae WSM419	Alphaproteobacteria
+Sinorhizobium meliloti 1021	Alphaproteobacteria
+Sodalis glossinidius str. morsitans	Gammaproteobacteria
+Solanum lycopersicum	plant
+Solanum tuberosum	plant
+Solibacter usitatus Ellin6076	Acidobacteria
+Sorangium cellulosum So ce 56	Deltaproteobacteria
+Sorghum bicolor	plant
+Spathaspora passalidarum	fungi
+Sphaeroforma arctica jp610	metazoa
+Sphingomonas wittichii RW1	Alphaproteobacteria
+Sphingopyxis alaskensis RB2256	Alphaproteobacteria
+Spizellomyces punctatus daom br117	fungi
+Sporobolomyces roseus	fungi
+Sporotrichum thermophile	fungi
+Stagonospora nodorum	fungi
+Staphylococcus aureus RF122	Firmicutes
+Staphylococcus aureus subsp. aureus COL	Firmicutes
+Staphylococcus aureus subsp. aureus JH1	Firmicutes
+Staphylococcus aureus subsp. aureus JH9	Firmicutes
+Staphylococcus aureus subsp. aureus MRSA252	Firmicutes
+Staphylococcus aureus subsp. aureus MSSA476	Firmicutes
+Staphylococcus aureus subsp. aureus Mu3	Firmicutes
+Staphylococcus aureus subsp. aureus Mu50	Firmicutes
+Staphylococcus aureus subsp. aureus MW2	Firmicutes
+Staphylococcus aureus subsp. aureus N315	Firmicutes
+Staphylococcus aureus subsp. aureus NCTC 8325	Firmicutes
+Staphylococcus aureus subsp. aureus str. Newman	Firmicutes
+Staphylococcus aureus subsp. aureus USA300	Firmicutes
+Staphylococcus aureus subsp. aureus USA300_TCH1516	Firmicutes
+Staphylococcus epidermidis ATCC 12228	Firmicutes
+Staphylococcus epidermidis RP62A	Firmicutes
+Staphylococcus haemolyticus JCSC1435	Firmicutes
+Staphylococcus saprophyticus subsp. saprophyticus ATCC 15305	Firmicutes
+Staphylothermus marinus F1	Crenarchaeota
+Stereum hirsutum	fungi
+Streptococcus agalactiae 2603V R	Firmicutes
+Streptococcus agalactiae A909	Firmicutes
+Streptococcus agalactiae NEM316	Firmicutes
+Streptococcus gordonii str. Challis substr. CH1	Firmicutes
+Streptococcus mutans UA159	Firmicutes
+Streptococcus pneumoniae CGSP14	Firmicutes
+Streptococcus pneumoniae D39	Firmicutes
+Streptococcus pneumoniae Hungary19A-6	Firmicutes
+Streptococcus pneumoniae R6	Firmicutes
+Streptococcus pneumoniae TIGR4	Firmicutes
+Streptococcus pyogenes M1 GAS	Firmicutes
+Streptococcus pyogenes MGAS10270	Firmicutes
+Streptococcus pyogenes MGAS10394	Firmicutes
+Streptococcus pyogenes MGAS10750	Firmicutes
+Streptococcus pyogenes MGAS2096	Firmicutes
+Streptococcus pyogenes MGAS315	Firmicutes
+Streptococcus pyogenes MGAS5005	Firmicutes
+Streptococcus pyogenes MGAS6180	Firmicutes
+Streptococcus pyogenes MGAS8232	Firmicutes
+Streptococcus pyogenes MGAS9429	Firmicutes
+Streptococcus pyogenes SSI-1	Firmicutes
+Streptococcus pyogenes str. Manfredo	Firmicutes
+Streptococcus sanguinis SK36	Firmicutes
+Streptococcus suis 05ZYH33	Firmicutes
+Streptococcus suis 98HAH33	Firmicutes
+Streptococcus thermophilus CNRZ1066	Firmicutes
+Streptococcus thermophilus LMD-9	Firmicutes
+Streptococcus thermophilus LMG 18311	Firmicutes
+Streptomyces avermitilis MA-4680	Actinobacteria
+Streptomyces coelicolor A3	Actinobacteria
+Streptomyces griseus subsp. griseus NBRC 13350	Actinobacteria
+Strongylocentrotus_purpuratus	metazoa
+Sulfolobus acidocaldarius DSM 639	Crenarchaeota
+Sulfolobus solfataricus P2	Crenarchaeota
+Sulfolobus tokodaii str. 7	Crenarchaeota
+Sulfurimonas denitrificans DSM 1251	Epsilonproteobacteria
+Sulfurovum sp. NBC37-1	Epsilonproteobacteria
+Symbiobacterium thermophilum IAM 14863	Firmicutes
+Synechococcus elongatus PCC 6301	Cyanobacteria
+Synechococcus elongatus PCC 7942	Cyanobacteria
+Synechococcus sp. CC9311	Cyanobacteria
+Synechococcus sp. CC9605	Cyanobacteria
+Synechococcus sp. CC9902	Cyanobacteria
+Synechococcus sp. JA-2-3Ba	Cyanobacteria
+Synechococcus sp. JA-3-3Ab	Cyanobacteria
+Synechococcus sp. PCC 7002	Cyanobacteria
+Synechococcus sp. RCC307	Cyanobacteria
+Synechococcus sp. WH 7803	Cyanobacteria
+Synechococcus sp. WH 8102	Cyanobacteria
+Synechocystis sp. PCC 6803	Cyanobacteria
+Syntrophobacter fumaroxidans MPOB	Deltaproteobacteria
+Syntrophomonas wolfei subsp. wolfei str. Goettingen	Firmicutes
+Syntrophus aciditrophicus SB	Deltaproteobacteria
+Takifugu rubripes	metazoa
+Tetrahymena thermophila	alveolate
+Thalassiosira pseudonana	stramenopile
+Thecamonas trahens atcc 50062	metazoa
+Thermoanaerobacter pseudethanolicus ATCC 33223	Firmicutes
+Thermoanaerobacter sp. X514	Firmicutes
+Thermoanaerobacter tengcongensis MB4	Firmicutes
+Thermobifida fusca YX	Actinobacteria
+Thermococcus kodakarensis KOD1	Euryarchaeota
+Thermofilum pendens Hrk 5	Crenarchaeota
+Thermoplasma acidophilum DSM 1728	Euryarchaeota
+Thermoplasma volcanium GSS1	Euryarchaeota
+Thermoproteus neutrophilus V24Sta	Crenarchaeota
+Thermosipho melanesiensis BI429	Thermotogae
+Thermosynechococcus elongatus BP-1	Cyanobacteria
+Thermotoga lettingae TMO	Thermotogae
+Thermotoga maritima MSB8	Thermotogae
+Thermotoga petrophila RKU-1	Thermotogae
+Thermus thermophilus HB27	Deinococci
+Thermus thermophilus HB8	Deinococci
+Thielavia terrestris	fungi
+Thiobacillus denitrificans ATCC 25259	Betaproteobacteria
+Thiomicrospira crunogena XCL-2	Gammaproteobacteria
+Thraustotheca clavata	oomycetes
+Toxoplasma gondii	alveolate
+Trametes versicolor	fungi
+Tremella mesenterica	fungi
+Treponema denticola ATCC 35405	Spirochaetes
+Treponema pallidum subsp. pallidum str. Nichols	Spirochaetes
+Trichoderma atoviride	fungi
+Trichoderma reesei	fungi
+Trichoderma virens	fungi
+Trichodesmium erythraeum IMS101	Cyanobacteria
+Trichomonas vaginalis	excavate
+Trichophyton equinum	fungi
+Trichoplax adhaerens	metazoa
+Tropheryma whipplei str. Twist	Actinobacteria
+Tropheryma whipplei TW08 27	Actinobacteria
+Trypanosoma brucei	excavate
+Trypanosoma cruzi	excavate
+Uncinocarpus reesii	fungi
+uncultured methanogenic archaeon RC-I	Euryarchaeota
+Ureaplasma parvum serovar 3 str. ATCC 27815	Mollicutes
+Ureaplasma parvum serovar 3 str. ATCC 700970	Mollicutes
+Ustilago maydis	fungi
+Verminephrobacter eiseniae EF01-2	Betaproteobacteria
+Verticillium albo-atrum	fungi
+Verticillium dahliae	fungi
+Vibrio cholerae O1 biovar eltor str. N16961	Gammaproteobacteria
+Vibrio cholerae O395	Gammaproteobacteria
+Vibrio fischeri ES114	Gammaproteobacteria
+Vibrio harveyi ATCC BAA-1116	Gammaproteobacteria
+Vibrio parahaemolyticus RIMD 2210633	Gammaproteobacteria
+Vibrio vulnificus CMCP6	Gammaproteobacteria
+Vibrio vulnificus YJ016	Gammaproteobacteria
+Vitis vinifera	plant
+Volvox carteri	chlorophyte
+Wallemia sebi	fungi
+Wickerhamomyces anomalus	fungi
+Wigglesworthia glossinidia endosymbiont of Glossina brevipalpis	Gammaproteobacteria
+Wolbachia endosymbiont of Drosophila melanogaster	Alphaproteobacteria
+Wolbachia endosymbiont strain TRS of Brugia malayi	Alphaproteobacteria
+Wolfiporia cocos	fungi
+Wolinella succinogenes DSM 1740	Epsilonproteobacteria
+Xanthobacter autotrophicus Py2	Alphaproteobacteria
+Xanthomonas axonopodis pv. citri str. 306	Gammaproteobacteria
+Xanthomonas campestris pv. campestris str. 8004	Gammaproteobacteria
+Xanthomonas campestris pv. campestris str. ATCC 33913	Gammaproteobacteria
+Xanthomonas campestris pv. vesicatoria str. 85-10	Gammaproteobacteria
+Xanthomonas oryzae pv. oryzae KACC10331	Gammaproteobacteria
+Xanthomonas oryzae pv. oryzae MAFF 311018	Gammaproteobacteria
+Xanthoria parietina	fungi
+Xenopus tropicalis	metazoa
+Xylella fastidiosa 9a5c	Gammaproteobacteria
+Xylella fastidiosa M12	Gammaproteobacteria
+Xylella fastidiosa M23	Gammaproteobacteria
+Xylella fastidiosa Temecula1	Gammaproteobacteria
+Yarrowia lipolytica	fungi
+Yersinia enterocolitica subsp. enterocolitica 8081	Gammaproteobacteria
+Yersinia pestis Angola	Gammaproteobacteria
+Yersinia pestis Antiqua	Gammaproteobacteria
+Yersinia pestis biovar Microtus str. 91001	Gammaproteobacteria
+Yersinia pestis CO92	Gammaproteobacteria
+Yersinia pestis KIM	Gammaproteobacteria
+Yersinia pestis Nepal516	Gammaproteobacteria
+Yersinia pestis Pestoides F	Gammaproteobacteria
+Yersinia pseudotuberculosis IP 31758	Gammaproteobacteria
+Yersinia pseudotuberculosis IP 32953	Gammaproteobacteria
+Yersinia pseudotuberculosis YPIII	Gammaproteobacteria
+Zea mays	plant
+Zymomonas mobilis subsp. mobilis ZM4	Alphaproteobacteria
