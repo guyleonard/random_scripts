@@ -1,4 +1,5 @@
 #!/usr/bin/perl
+use strict;
 use warnings;
 use Cwd;
 use File::Basename;
@@ -23,15 +24,18 @@ use DateTime;
 
 ###
 # MYSQL Commands to Clean NCBI Database after insertion
+# Do not do this until you have made a record of what is going to be
+# deleted, mostly it's serovar/strains of bacteria
+# but sometimes it's Neuropsora crassa!!
 # Step 1: - DELETE FROM orchard WHERE gr_superkingdom = '';
 # DONE
 # If you want to, you can order the table by taxa name
 # Query: ALTER TABLE orchard ORDER BY species;
 # but mysql doesn't really care what order the data is in
 # so it would only be aesthetic if you looked at it...
-# 
+#
 ### DO NOT USE THIS COMMAND ###
-# Query: TRUNCATE orchard; 
+# Query: TRUNCATE orchard;
 # The above clears the entire database...useful during testing but
 # devasting otherwise...
 ###
@@ -44,8 +48,8 @@ our $TEST_RUN = 0;
 
 #####
 # USER VARIBALES
-our $SEED             = "$WD\/nr_1.fasta";
-our $SPECIES_NAME     = $EMPTY;                                                      # set to EMPTY for NCBI else give it you taxa name...
+our $SEED         = "$WD\/nr_1.fasta";
+our $SPECIES_NAME = $EMPTY;              # set to EMPTY for NCBI else give it you taxa name...
 our $SOURCE           = "NCBI nr FASTA ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA";
 our $SOURCE_ID        = "NCBI";
 our $OLD_SPECIES_LIST = "$WD\/old_species_list_info.txt";
@@ -74,7 +78,7 @@ sub plant_seed {
 
     my (
         $gr_superkingdom, $gr_kingdom, $gr_phylum,   $gr_subphylum, $gr_class,
-        $gr_order,        $gr_family,  $gr_special1, $gr_redundant, $subkingdom
+        $gr_order,        $gr_family,  $gr_special1, $gr_redundant, $gr_subkingdom
     ) = $EMPTY;
 
     # I only need to open the old file once, before I do anything else...
@@ -86,6 +90,7 @@ sub plant_seed {
 
         # DATETIME values in 'YYYY-MM-DD HH:MM:SS'
         my $DATETIME = DateTime->now( time_zone => "local" )->datetime();
+
         # Remove the erroneous T - not good for MYSQL
         $DATETIME =~ s/T/ /igs;
 
@@ -93,7 +98,7 @@ sub plant_seed {
 
         if ( $SOURCE_ID eq "NCBI" ) {
             ## NCBI
-            @defline_values = split( /\|/, $defline );
+            my @defline_values = split( /\|/, $defline );
 
             my $protein_ID = $defline_values[1];
 
@@ -107,77 +112,96 @@ sub plant_seed {
             $seq_array_value =~ m/(\d+)(\_)(\>?gi)/;
             $seq_array_value = $1;
 
-            # >gi|82593694|gb|ABB84748.1| DHFR [Pneumocystis jirovecii]
-            $defline_values[4] =~ m/(.*?)(\[)(.*?)(\])/is;
-            $SPECIES_NAME = $3;
-            # Remove non-alphanumerics, but keeps spaces, that will screw with mysql insertion!!
-            # but I want to keep . and - as they might appear with sp. and hyphenated names
-            # This is going to cause upset with taxon names containing
-            # : or / but mostly they are strains/serotypes and there's plenty of their 'siblings'
-            # No taxonomy info will be retreived... I will filter those out
-            # and truncate them from the mysql database, not that important (for our needs)
-            # See MYSQL section at top...
-            $SPECIES_NAME =~ s/\'//g; # remove pesly single quotes
-            $SPECIES_NAME =~ s/\:/\_/g; # replace colon with underscore
-            #$SPECIES_NAME =~ s/\-/\_/g; # replace dash with underscore
+            # I am going to try and just query everything from GenBank
+            # based on the GI number - some taxa have far too messy deflines
+            # and a simple pattern match doesn't catch them all...
+            #
+            #
+            #            # >gi|82593694|gb|ABB84748.1| DHFR [Pneumocystis jirovecii]
+            #            # but be careful about
+            #            # >gi|etc| UDP-3-O-[3-hydroxymyristoyl] glucosamine N-acyltransferase [Marinomonas sp. MED121]
+            #            # as the regex will match the first set of brackets...
+            #            # although it really shouldn't but there you go!?
+            #            # since there should always be Genus species strain
+            #            # I am going to try and splittin [Genus][ ][species strain]
+            #            #$defline_values[4] =~ m/(.*?)(\[)(.*?)(\])/gis; # list context
+            #            $defline_values[4] =~ m/(.*?\[)(\w+\s+\w+\.?.*)(\])/g;
+            #            $SPECIES_NAME = $2;
+            #            # Remove non-alphanumerics, but keep spaces, that will screw with mysql insertion!!
+            #            # but I want to keep . and - as they might appear with sp. and hyphenated names
+            #            # This is going to cause upset with taxon names containing
+            #            # : or / but mostly they are strains/serotypes and there's plenty of their 'siblings'
+            #            # No taxonomy info will be retreived... I will filter those out
+            #            # and truncate them from the mysql database, not that important (for our needs)
+            #            # See MYSQL section at top...
+            #            $SPECIES_NAME =~ s/\'//g; # remove pesky single quotes
+            #            $SPECIES_NAME =~ s/\:/\_/g; # replace colon with underscore
+            #            #$SPECIES_NAME =~ s/\-/\_/g; # replace dash with underscore
+            #
+            #            if ( defined $SPECIES_NAME ) {
+            #                print "$seq_array_value Inserting $SPECIES_NAME\n";
+            #
+            #                # Get group division taxonomies
+            #                my %group_divisions = get_taxonomy($SPECIES_NAME);
+            #
+##print map { "$_ => $group_divisions{$_}\n" } keys %group_divisions;
+##cellular organisms[no rank]Eukaryota[superkingdom]Opisthokonta[no rank]Fungi[kingdom]Dikarya[subkingdom]Ascomycota[phylum]
+##Taphrinomycotina[subphylum]Pneumocystidomycetes[class]Pneumocystidales[order]Pneumocystidaceae[family]Pneumocystis[genus]
+## Divisions
+#                $gr_superkingdom = $group_divisions{'superkingdom'};
+#                $gr_kingdom      = $group_divisions{'kingdom'};
+#                $gr_subkingdom   = $group_divisions{'subkingdom'};
+#                $gr_phylum       = $group_divisions{'phylum'};
+#                $gr_subphylum    = $group_divisions{'subphylum'};
+#                $gr_class        = $group_divisions{'class'};
+#                $gr_order        = $group_divisions{'order'};
+#                $gr_family       = $group_divisions{'family'};
+#                $gr_special1     = $group_divisions{'no rank'};
+#
+#                $gr_redundant = $old_list{$SPECIES_NAME};
+#
+#                if ( $TEST_RUN == 1 ) {
+#
+#                    print "
+#                    &mysql(
+#                        $protein_ID,                      $accession,       $SPECIES_NAME,
+#                        $sequenceArray[$seq_array_value], $gr_superkingdom, $gr_kingdom,
+#                        $gr_phylum,                       $gr_class,        $gr_order,
+#                        $gr_family,                       $gr_special1,     $gr_redundant,
+#                        $DATETIME,                        $SOURCE,          $SOURCE_ID,
+#                        $gr_subkingdom,                   $gr_subphylum
+#                    );
+#                    \n";
+#                }
+#                else {
+#                    &mysql($protein_ID, $accession, $SPECIES_NAME, $sequenceArray[$seq_array_value], $gr_superkingdom, $gr_kingdom, $gr_phylum, $gr_class, $gr_order, $gr_family, $gr_special1, $gr_redundant, $DATETIME, $SOURCE, $SOURCE_ID, $gr_subkingdom, $gr_subphylum);
+#                }
+#            }
+#            else {
 
-            #$SPECIES_NAME =~ s/[^\w\d\s]//g;
+            print "Checking $defline_values[1]";
+            my $exists = check_existing_mysql("$defline_values[1]");
 
-            #$SPECIES_NAME =~ s/[^\w \-\.]//g;
-            #$SPECIES_NAME =~ s/[^\w\d\s:]//g;
-            # but for some reason single quotes are getting through!!
-            # so lets just do another replace..
-            #$SPECIES_NAME =~ s/\'//g;
-
-            if ( defined $SPECIES_NAME ) {
-                print "$seq_array_value Inserting $SPECIES_NAME\n";
-
-                # Get group division taxonomies
-                my %group_divisions = get_taxonomy($SPECIES_NAME);  
-
-#print map { "$_ => $group_divisions{$_}\n" } keys %group_divisions;
-#cellular organisms[no rank]Eukaryota[superkingdom]Opisthokonta[no rank]Fungi[kingdom]Dikarya[subkingdom]Ascomycota[phylum]
-#Taphrinomycotina[subphylum]Pneumocystidomycetes[class]Pneumocystidales[order]Pneumocystidaceae[family]Pneumocystis[genus]
-# Divisions
-                $gr_superkingdom = $group_divisions{'superkingdom'};
-                $gr_kingdom      = $group_divisions{'kingdom'};
-                $gr_subkingdom   = $group_divisions{'subkingdom'};
-                $gr_phylum       = $group_divisions{'phylum'};
-                $gr_subphylum    = $group_divisions{'subphylum'};
-                $gr_class        = $group_divisions{'class'};
-                $gr_order        = $group_divisions{'order'};
-                $gr_family       = $group_divisions{'family'};
-                $gr_special1     = $group_divisions{'no rank'};
-
-                $gr_redundant = $old_list{$SPECIES_NAME};
-
-                if ( $TEST_RUN == 1 ) {
-
-                    print "
-                    &mysql(
-                        $protein_ID,                      $accession,       $SPECIES_NAME,
-                        $sequenceArray[$seq_array_value], $gr_superkingdom, $gr_kingdom,
-                        $gr_phylum,                       $gr_class,        $gr_order,
-                        $gr_family,                       $gr_special1,     $gr_redundant,
-                        $DATETIME,                        $SOURCE,          $SOURCE_ID,
-                        $gr_subkingdom,                   $gr_subphylum
-                    );
-                    \n";
-                }
-                else {
-                    &mysql($protein_ID, $accession, $SPECIES_NAME, $sequenceArray[$seq_array_value], $gr_superkingdom, $gr_kingdom, $gr_phylum, $gr_class, $gr_order, $gr_family, $gr_special1, $gr_redundant, $DATETIME, $SOURCE, $SOURCE_ID, $gr_subkingdom, $gr_subphylum);
-                }
+            if ( $exists == 1) {
+                print " and it's in the DB (E$exists). Skipping.\n";
             }
             else {
 
+                print " and it's not in the DB (E$exists). Retrieving.\n";
+
                 # This is when some taxa do not have a nice defline identifier with the binomial name
                 # in square brackets - so we employ some BioPerl trickery to get it! mwhahaha.
-                $db_obj       = Bio::DB::GenBank->new;
-                $seq_obj      = $db_obj->get_Seq_by_acc("$defline_values[1]");
-                $SPECIES_NAME = $seq_obj->species->binomial;
+                my $db_obj = Bio::DB::GenBank->new;
+
+                my $seq_obj = $db_obj->get_Seq_by_acc("$defline_values[1]");
+
+                # Should probably move this to $seq_obj->taxon to create a
+                # Bio::Taxon object as Bio::Species will be deprecated at some point
+                $SPECIES_NAME = $seq_obj->species->binomial('FULL');
+
                 # Remove non-alphanumerics that will screw with mysql!!
-                $SPECIES_NAME =~ s/\'//g; # remove pesly single quotes
-                $SPECIES_NAME =~ s/\:/\_/g; # replace colon with underscore
+                $SPECIES_NAME =~ s/\'//g;      # remove pesly single quotes
+                $SPECIES_NAME =~ s/\:/\_/g;    # replace colon with underscore
                 print "$seq_array_value Inserting $SPECIES_NAME\n";
 
                 # Get group division taxonomies
@@ -208,19 +232,51 @@ sub plant_seed {
                     \n";
                 }
                 else {
-                    &mysql($protein_ID, $accession, $SPECIES_NAME, $sequenceArray[$seq_array_value], $gr_superkingdom, $gr_kingdom, $gr_phylum, $gr_class, $gr_order, $gr_family, $gr_special1, $gr_redundant, $DATETIME, $SOURCE, $SOURCE_ID, $gr_subkingdom, $gr_subphylum);                }
+                    &mysql(
+                        $protein_ID,                      $accession,       $SPECIES_NAME,
+                        $sequenceArray[$seq_array_value], $gr_superkingdom, $gr_kingdom,
+                        $gr_phylum,                       $gr_class,        $gr_order,
+                        $gr_family,                       $gr_special1,     $gr_redundant,
+                        $DATETIME,                        $SOURCE,          $SOURCE_ID,
+                        $gr_subkingdom,                   $gr_subphylum
+                    );
+                }
             }
+
+            #            }
         }
         elsif ( $SOURCE_ID eq "JGI" ) {
             ## JGI
             #print "Inserting $count\n";
-            @defline_values = split( /\>/, $defline );    # JGI
+            my @defline_values = split( /\>/, $defline );    # JGI
                   #print "&mysql($defline_values[1], $defline_values[1], $SPECIES_NAME, $sequenceArray[$count], $gr);";
                   #&mysql( $defline_values[1], $defline_values[1], $SPECIES_NAME, $sequenceArray[$count], $gr );
         }
     }
 }
 
+sub check_existing_mysql {
+
+    my $protein_ID = shift;
+    my $exists     = 0;
+    #print "Query = SELECT EXISTS(SELECT 1 FROM $tablename WHERE protein_ID ='$protein_ID' LIMIT 1)\n";
+    #print "\nExists = $exists\t";
+
+    my $dbh = DBI->connect_cached( $ds, $user, $password )
+      or die "\nError ($DBI::err):$DBI::errstr\n";
+
+    my $statement = $dbh->prepare("SELECT EXISTS(SELECT 1 FROM $tablename WHERE protein_ID ='$protein_ID' LIMIT 1)")
+      or die "\nError ($DBI::err):$DBI::errstr\n";
+    $statement->execute or die "\nError ($DBI::err):$DBI::errstr\n";
+
+    $exists = $statement->fetch(); #all_arrayref();
+    $exists = $exists->[0]; #->[0];
+
+    #print "and $exists\n";
+    return $exists;
+}
+
+# Just a simple CSV parser of the old file, read in to a hash.
 sub get_old_taxonomy {
 
     open my $in_old, '<', "$OLD_SPECIES_LIST";
@@ -247,7 +303,9 @@ sub get_taxonomy {
     # Retreive taxon_name
     my $unknown = $dbh->get_taxon( -name => "$taxon_name" );
 
-    # Perhaps a little counterintuitively but this is the new Bio::Perl way of doing it
+    # Perhaps a little counterintuitively, from the outset,
+    # but this is the new Bio::Perl way of doing it
+    # although most of the tutorials won't show this way!
     # build an empty tree
     my $tree_functions = Bio::Tree::Tree->new();
 
@@ -264,7 +322,6 @@ sub get_taxonomy {
         $taxonomy{$rank} = $name;
     }
     return %taxonomy;
-
 }
 
 sub mysql {
@@ -294,7 +351,7 @@ sub mysql {
     #if ( my $dbh->ping ) {
 
     # DEFINE A MySQL QUERY
-    $statement = $dbh->prepare(
+    my $statement = $dbh->prepare(
 "INSERT IGNORE INTO $tablename (protein_ID, accession, species, sequence, gr_superkingdom, gr_kingdom, gr_phylum, gr_class, gr_order, gr_family, gr_special1, gr, date_added, source, source_ID, gr_subkingdom, gr_subphylum) VALUES ('$protein_ID', '$accession', '$SPECIES_NAME', '$sequence', '$gr_superkingdom', '$gr_kingdom', '$gr_phylum', '$gr_class', '$gr_order', '$gr_family', '$gr_special1', '$gr', '$date_added', '$source', '$source_ID', '$gr_subkingdom', '$gr_subphylum')"
     ) or die "\nError ($DBI::err):$DBI::errstr\n";
     $statement->execute or die "\nError ($DBI::err):$DBI::errstr\n";
@@ -306,6 +363,7 @@ sub mysql {
 # invisible to most programs"
 # This makes any normal FASTA parsers skip over all the multiple records.
 # not very useful. i.e. no BioPerl here :(
+# although once I have extracted them I could make a BioPerl object...
 # This should gracefully identify them and deal with them else
 # continue as normal.
 # I should also mention that I am only going to concern myself with refseq
@@ -374,7 +432,7 @@ sub get_deflines {
 sub get_sequences {
 
     my @sequenceArray = ();
-    $temp = $EMPTY;
+    my $temp          = $EMPTY;
     open my $in_sequence, '<', $SEED;
 
     #Read in the sequences, line by line concatening the strings to one
