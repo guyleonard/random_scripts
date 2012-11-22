@@ -19,20 +19,33 @@ use Bio::SearchIO;
 # can be any term in NCBI taxonomy and "no_hits"
 # be aware "no rank" classes may not appear in the lookup results
 # e.g. for opisthokonta you will have to specify Metazoa, Fungi and Choanoflagellida
+# results without hits are sent to a separate file...
 
-my @do_not_sift_list = ( "no_hits", "Metazoa", "Fungi", "Choanoflagellida" );
+my @do_not_sift_list = ( "Metazoa", "Fungi", "Choanoflagellida" );
 
 my $file_name      = "/home/cs02gl/Desktop/random_scripts/blast_1.out";
 my $blast_database = "/home/cs02gl/Desktop/blasto_v2/est_alignments/blasto_ests.fasta";
 
 
-my %sequence_hash = ();
+my %kept_sequence_hash = ();
+my %sifted_sequence_hash = ();
+my %no_hit_sequence_hash = ();
 
 parse();
 
-open my $OUT_SEQ_FILE, ">", "kept_sequence.fasta" or die $!;
-while ((my $key, my $value) = each(%sequence_hash)){
-     print $OUT_SEQ_FILE $value . "\n";
+open my $OUT_SEQ_FILE1, ">", "kept_sequences.fasta" or die $!;
+while ((my $key, my $value) = each(%kept_sequence_hash)){
+     print $OUT_SEQ_FILE1 $value . "\n";
+}
+
+open my $OUT_SEQ_FILE2, ">", "no_hits_sequences.fasta" or die $!;
+while ((my $key, my $value) = each(%no_hits_sequence_hash)){
+     print $OUT_SEQ_FILE2 $value . "\n";
+}
+
+open my $OUT_SEQ_FILE3, ">", "sifted_sequences.fasta" or die $!;
+while ((my $key, my $value) = each(%sifted_sequence_hash)){
+     print $OUT_SEQ_FILE3 $value . "\n";
 }
 
 sub parse {
@@ -76,10 +89,16 @@ sub parse {
                         print "\t\t$hit_accession of length $hit_length ($hit_significance) from $info2[0] $info2[1] - Kept\n";
 
                         my @split_sequence = split (/\n/, $sequence);
-                        $sequence_hash{$split_sequence[0]} = $sequence;
+                        $kept_sequence_hash{$split_sequence[0]} = $sequence;
                     }
                     else {
+
+                        my $sequence = get_sequence($query_accession);
+
                         print "\t\t$hit_accession of length $hit_length ($hit_significance) from $info2[0] $info2[1] - Sifted\n";
+
+                        my @split_sequence = split (/\n/, $sequence);
+                        $sifted_sequence_hash{$split_sequence[0]} = $sequence;
                     }
                 }
             }
@@ -87,7 +106,11 @@ sub parse {
         else {
             $no_hits++;
             my $sequence = get_sequence($query_accession);
+
             print "Query: $query_accession of length $query_length\n\thas no hits\n$sequence\n";
+
+            my @split_sequence = split (/\n/, $sequence);
+            $bo_hit_sequence_hash{$split_sequence[0]} = $sequence;
         }
         $total_queries++;
     }
