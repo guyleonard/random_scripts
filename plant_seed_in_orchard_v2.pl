@@ -59,7 +59,7 @@ our $OLD_SPECIES_LIST = "$WD\/old_species_list_info.txt";
 our $ds        = "dbi:mysql:new_proteins:157.140.105.254";
 our $tablename = "orchard";
 our $user      = "orchard";
-our $password  = "jcsy4s8b";
+our $password  = "xxxxxxx";
 
 print "Opening File: $SEED\nReading 'deflines'\n";
 
