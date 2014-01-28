@@ -12,7 +12,7 @@ our $working_directory = getcwd;
 our $ds        = "dbi:mysql:proteins:127.0.0.1";
 our $tablename = "protein";
 our $user      = "cs02gl";
-our $password  = "ib54d01w";
+our $password  = "xxxxxxx";
 
 #####
 # USER VARIBALES
