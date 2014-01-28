@@ -14,7 +14,7 @@ use DBD::mysql;
 our $ds        = "dbi:mysql:new_proteins:157.140.105.254";
 our $tablename = "orchard";
 our $user      = "orchard";
-our $password  = "jcsy4s8b";
+our $password  = "xxxxxxxxx";
 
     # PERL MYSQL CONNECT()
     my $dbh = DBI->connect_cached( $ds, $user, $password )
