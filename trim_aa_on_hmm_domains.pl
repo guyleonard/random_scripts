@@ -47,30 +47,66 @@ if ( defined $options{s} && defined $options{p} && defined $options{t} ) {
 
     my $seqs_unmatched_out = Bio::SeqIO->new( -file => ">$file\_unmatched\_$ext", -format => "fasta" );
 
-      while ( my $seq = $seqs_in->next_seq ) {
+    while ( my $seq = $seqs_in->next_seq ) {
 
-      	# recover full accession line from fasta file
+        # recover full accession line from fasta file
         my $seq_name = $seq->display_id . " " . $seq->desc;
-        my $sequence = $seq->seq();
+
+        # get the sequence and it's length
+        my $sequence        = $seq->seq();
+        my $sequence_length = length $sequence;
 
         # force perl regex not to interpret chars in the string as regex operators
+        # so we don't get problems from random chars like '+' in accession names
         my $matches = first { /\Q$seq_name\E/g } @read_tsv;
 
+        # split the matches
         $matches =~ m/(.*)\t(\d+)\t(\d+)/;
         $matches = $1;
 
         my $start_pos = $2;
-        my $end_pos = $3;
+        my $end_pos   = $3;
 
-        if ($seq_name eq $matches) {
-        	print "Matching: $seq_name **TO** ";
-        	print "$matches\n";
+        if ( $seq_name eq $matches ) {
+
+            print "Start: $start_pos\tEnd:: $end_pos\tLength: $sequence_length\n";
+
+            # I think these next assumptions are correct
+            # we can't substring a seq more/less than the sequence exists...
+
+            # if start_pos is less than the amount to trim off, we would trim in to the negative
+            # e.g. start_pos = 5 and trim = 100 so 5 - 100 = -95
+            if ( $start_pos <= $INPUT_TRIM ) {
+
+                # 5 - 5 = 0, resetting to start of read
+                # which will always be position 1
+                $start_pos = 1;
+            }
+            else {
+                # else we can do start_pos = 230, 230 - 100 = 130
+                $start_pos = $start_pos - $INPUT_TRIM;
+            }
+
+            # if end_pos plus trim length is greater than the entire length
+            # e.g. end_pos 98, trim 100, length 150
+            # 98 + 100 = 198 >= 150
+            if ( ( $end_pos + $INPUT_TRIM ) >= $sequence_length ) {
+
+                # therefore 100 - 98
+                $end_pos = $sequence_length;
+            }
+            else {
+                $end_pos = $end_pos + $INPUT_TRIM;
+            }
+            print "Matching: $seq_name **TO** ";
+            print "$matches\n";
+            print "Start: $start_pos\tEnd:: $end_pos\n\n";
+
+            my $sub_sequence = $seq->subseq( $start_pos, $end_pos );
         }
         else {
-        	print "nope\n";
+            print "nope\n\n";
         }
-
-        
 
     }
 }
