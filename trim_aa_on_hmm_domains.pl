@@ -41,7 +41,7 @@ if ( defined $options{s} && defined $options{p} && defined $options{t} ) {
 
     my $seqs_in = Bio::SeqIO->new( -file => $INPUT_SEQUENCES, -format => 'fasta' );
 
-    my ( $file, $dir, $ext ) = fileparse $INPUT_SEQUENCES, '.*';
+    my ( $file, $dir, $ext ) = fileparse $INPUT_SEQUENCES, '.fa';
 
     my $seqs_out = Bio::SeqIO->new( -file => ">$file\_trimmed\_$ext", -format => "fasta" );
 
@@ -50,7 +50,10 @@ if ( defined $options{s} && defined $options{p} && defined $options{t} ) {
     while ( my $seq = $seqs_in->next_seq ) {
 
         # recover full accession line from fasta file
-        my $seq_name = $seq->display_id . " " . $seq->desc;
+        
+        my $seq_id = $seq->display_id;
+        my $seq_description = $seq->desc;
+        my $seq_name = "$seq_id $seq_description";
 
         # get the sequence and it's length
         my $sequence        = $seq->seq();
@@ -103,9 +106,17 @@ if ( defined $options{s} && defined $options{p} && defined $options{t} ) {
             print "Start: $start_pos\tEnd:: $end_pos\n\n";
 
             my $sub_sequence = $seq->subseq( $start_pos, $end_pos );
+
+            # create new output seq
+
+            my $seq_out = Bio::PrimarySeq->new ( -seq => "$sub_sequence", -id => $seq_id, -description => $seq_description );
+
+            $seqs_out->write_seq($seq_out);
         }
         else {
             print "nope\n\n";
+
+            $seqs_unmatched_out->write_seq($seq);
         }
 
     }
@@ -133,14 +144,6 @@ sub read_tsv {
 
     return @fields;
 }
-
-#my $seqin  = Bio::SeqIO->new( -file => "hypho_ray_gapcloser_sorted.fasta",        -format => "fasta" );
-#my $seqout = Bio::SeqIO->new( -file => ">hypho_ray_gapcloser_sorted_ge_5k.fasta", -format => "fasta" );
-#while ( my $seq = $seqin->next_seq ) {
-#    if ( $seq->length >= 5000 ) {
-#        $seqout->write_seq($seq);
-#    }
-#}
 
 sub display_help {
 
