@@ -8,7 +8,7 @@ use Cwd;
 use Bio::SeqIO;
 use File::Basename;
 use Getopt::Std;
-use List::Util 'first';
+use List::Util qw/first/;
 
 ##
 use Data::Dumper;    # temporary during rewrite to dump data nicely to screen
@@ -52,8 +52,10 @@ if ( defined $options{s} && defined $options{p} && defined $options{t} ) {
         # recover full accession line from fasta file
         
         my $seq_id = $seq->display_id;
-        my $seq_description = $seq->desc;
-        my $seq_name = "$seq_id $seq_description";
+        print "ID: $seq_id\n";
+        #my $seq_description = $seq->desc;
+        #print "DE: $seq_description\n";
+        my $seq_name = "$seq_id"; #$seq_description";
 
         # get the sequence and it's length
         my $sequence        = $seq->seq();
@@ -61,9 +63,10 @@ if ( defined $options{s} && defined $options{p} && defined $options{t} ) {
 
         # force perl regex not to interpret chars in the string as regex operators
         # so we don't get problems from random chars like '+' in accession names
-        my $matches = first { /\Q$seq_name\E/g } @read_tsv;
+        #my $matches = first { /\Q$seq_id\E/g } @read_tsv;
+        my $matches = first { m{ \Q$seq_id\E }gx } @read_tsv;
+        print "MA: $matches\n";
 
-        # split the matches
         $matches =~ m/(.*)\t(\d+)\t(\d+)/;
         $matches = $1;
 
@@ -101,15 +104,15 @@ if ( defined $options{s} && defined $options{p} && defined $options{t} ) {
             else {
                 $end_pos = $end_pos + $INPUT_TRIM;
             }
-            print "Matching: $seq_name **TO** ";
-            print "$matches\n";
-            print "Start: $start_pos\tEnd:: $end_pos\n\n";
+            #print "Matching: $seq_name **TO** ";
+            #print "$matches\n";
+            print "New Start: $start_pos\tEnd: $end_pos\n\n";
 
             my $sub_sequence = $seq->subseq( $start_pos, $end_pos );
 
             # create new output seq
 
-            my $seq_out = Bio::PrimarySeq->new ( -seq => "$sub_sequence", -id => $seq_id, -description => $seq_description );
+            my $seq_out = Bio::PrimarySeq->new ( -seq => "$sub_sequence", -id => $seq_id); #, -description => $seq_description );
 
             $seqs_out->write_seq($seq_out);
         }
